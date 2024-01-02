@@ -1,0 +1,48 @@
+{
+  "name": "saikoro",
+  "version": "0.0.1",
+  "description": "seed supported randomizer",
+  "keywords": [
+    "random",
+    "seed",
+    "range"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ichiql/saikoro.git"
+  },
+  "license": "MIT",
+  "author": "Yamashita, Shinichi",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "format": "pnpm dlx sort-package-json && pnpm dlx sort-compiler-options && pnpm dlx sort-compiler-options -c tsconfig.build.json && pnpm dlx prettier --write './**/*.{ts,tsx}' 'tsconfig*.json'",
+    "lint": "eslint ./src/*",
+    "prepublish": "pnpm build",
+    "test": "vitest --run"
+  },
+  "prettier": "@ichiql/prettier-config",
+  "devDependencies": {
+    "@ichiql/prettier-config": "^0.1.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "vitest": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
