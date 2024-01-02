@@ -1,4 +1,4 @@
-# @ichiql/saikoro
+# Saikoro
 
 ```shell
 pnpm add saikoro
