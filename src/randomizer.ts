@@ -5,6 +5,21 @@ type Seed = {
   seedD: number
 }
 
+export function rand(seed?: string) {
+  if (seed === undefined) return () => Math.random()
+  return sfc32(cyrb128(seed))
+}
+
+export function randRange(min: number, max: number, seed?: string) {
+  const random = rand(seed)
+  return () => random() * (max - min) + min
+}
+
+export function randRangeInt(min: number, max: number, seed?: string) {
+  const random = rand(seed)
+  return () => Math.floor(random() * (max - min + 1)) + min
+}
+
 export function cyrb128(str: string) {
   let h1 = 1779033703,
     h2 = 3144134277,

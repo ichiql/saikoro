@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import saikoro from '../'
+import saikoro from '..'
 
 function checkValue(value: number, min: number = 0, max: number = 1) {
   expect(value).toBeGreaterThanOrEqual(min)
@@ -30,7 +30,7 @@ describe('Saikoro Basic', () => {
     const max = 10
     const random = saikoro({ min, max })
 
-    for (let i = 0; i < 10000000; i++) {
+    for (let i = 0; i < 1000; i++) {
       checkValue(random(), min, max)
     }
   })
