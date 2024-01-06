@@ -1,6 +1,6 @@
 {
   "name": "saikoro",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "seed supported randomizer",
   "keywords": [
     "random",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ichiql/saikoro.git"
+    "url": "git+https://github.com/nantokaworks/saikoro.git"
   },
   "license": "MIT",
   "author": "Yamashita, Shinichi",
@@ -32,9 +32,9 @@
     "prepublish": "pnpm build",
     "test": "vitest --run"
   },
-  "prettier": "@ichiql/prettier-config",
+  "prettier": "prettier-config-nantokaworks",
   "devDependencies": {
-    "@ichiql/prettier-config": "^0.1.1",
+    "prettier-config-nantokaworks": "^0.1.1",
     "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
