@@ -9,5 +9,5 @@ interface Options {
 export function saikoroArray<T>(arr: Array<T>, { seed, min, max }: Options = {}) {
   const isRange = min !== undefined && max !== undefined
   const random = isRange ? randRangeInt(min, max, seed) : randRangeInt(0, arr.length - 1, seed)
-  return () => arr[random()]
+  return () => (arr.length !== 0 ? arr[random()] : undefined)
 }
